@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace Microsoft.Win32
 {
-	public static partial class g
+	public static partial class API
 	{
 		public const int INVALID_HANDLE_VALUE = -1;
 

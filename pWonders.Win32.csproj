@@ -47,6 +47,7 @@
     <Compile Include="setupapi.h.cs" />
     <Compile Include="uxtheme.h.cs" />
     <Compile Include="winbase.h.cs" />
+    <Compile Include="windef.h.cs" />
     <Compile Include="winuser.h.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

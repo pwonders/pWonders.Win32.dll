@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Microsoft.Win32
 {
-	public static partial class g
+	public static partial class API
 	{
 		[DllImport("dwmapi.dll", SetLastError = true)]
 		public static extern int DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS pMarInset);

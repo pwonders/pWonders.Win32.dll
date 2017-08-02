@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Microsoft.Win32
 {
-	public static partial class g
+	public static partial class API
 	{
 		[DllImport("setupapi.dll", SetLastError = true, CharSet = CharSet.Auto)]
 		public static extern IntPtr SetupOpenInfFile(string FileName, string InfClass, int InfStyle, IntPtr ErrorLine);

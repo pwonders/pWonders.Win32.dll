@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Microsoft.Win32
 {
-	public static partial class g
+	public static partial class API
 	{
 		[DllImport("user32.dll", SetLastError = true)]
 		public static extern int GetRawInputDeviceList([In, Out] RAWINPUTDEVICELIST[] pRawInputDeviceList, ref int puiNumDevices, int cbSize);
@@ -243,15 +243,6 @@ namespace Microsoft.Win32
 		[DllImport("user32.dll", SetLastError = true)]
 		public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
-		[StructLayout(LayoutKind.Sequential)]
-		public struct RECT
-		{
-			public int Left;
-			public int Top;
-			public int Right;
-			public int Bottom;
-		}
-
 		[DllImport("user32.dll", SetLastError = true)]
 		public static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
 
@@ -422,5 +413,7 @@ namespace Microsoft.Win32
 
 		public const int WS_EX_COMPOSITED = 0x02000000;
 		public const int WS_EX_NOACTIVATE = 0x08000000;
+
+		public const int WM_THEMECHANGED = 0x031A;
 	}
 }
