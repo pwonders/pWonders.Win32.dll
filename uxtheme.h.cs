@@ -5,7 +5,8 @@ namespace Microsoft.Win32
 {
 	public static partial class g
 	{
-		// 2017-06-29, https://github.com/File-New-Project/EarTrumpet/blob/master/EarTrumpet/Services/AccentColorService.cs
+		// https://github.com/File-New-Project/EarTrumpet/blob/master/EarTrumpet/Services/AccentColorService.cs, 2017-06-29.
+		// https://www.quppa.net/blog/2013/01/02/retrieving-windows-8-theme-colours/, 2017-08-02.
 
 		[DllImport("uxtheme.dll", EntryPoint = "#94", CharSet = CharSet.Unicode)]
 		public static extern int GetImmersiveColorSetCount();
