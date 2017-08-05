@@ -415,5 +415,8 @@ namespace Microsoft.Win32
 		public const int WS_EX_NOACTIVATE = 0x08000000;
 
 		public const int WM_THEMECHANGED = 0x031A;
+
+		[DllImport("user32.dll")]
+		public static extern bool IsWindowVisible(IntPtr hWnd);
 	}
 }
