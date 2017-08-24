@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="winnt.h.cs" />
+    <Compile Include="windows.h.cs" />
+    <Compile Include="shellapi.h.cs" />
     <Compile Include="dwnapi.h.cs" />
     <Compile Include="fileapi.h.cs" />
     <Compile Include="hidsdi.h.cs" />
