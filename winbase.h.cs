@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace Microsoft.Win32
 {
@@ -10,19 +11,18 @@ namespace Microsoft.Win32
 		[DllImport("kernel32.dll", SetLastError = true)]
 		public static extern IntPtr CloseHandle(IntPtr hObject);
 
-		[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
-		public static extern uint GetPrivateProfileString
+		[DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+		public static extern int GetPrivateProfileString
 		(
 			string lpAppName,
 			string lpKeyName,
 			string lpDefault,
-			IntPtr lpReturnedString,
-			uint nSize,
+			[MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 4)] char[] lpReturnedString,
+			int nSize,
 			string lpFileName
 		);
 
-		[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
-		[return: MarshalAs(UnmanagedType.Bool)]
+		[DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
 		public static extern bool WritePrivateProfileString
 		(
 			string lpAppName,
